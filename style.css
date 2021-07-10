@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+/* font-family: 'Open Sans', sans-serif;
+
+font-family: 'Poppins', sans-serif; */
+
+:root{
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background-image: url('./images/bg-desktop.svg') ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-color: var(--violet);
+  color: #fff;
+}
+img{
+  max-width: 100%;
+}
+p{
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+h1{
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+a.btn{
+  text-decoration: none;
+  color: var(--violet);
+  background-color: #fff;
+  padding: 20px 75px;
+  border-radius: 50px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, .5);
+  transition: all .3s ease;
+}
+a.btn:hover{
+  background-color: var(--soft-magenta);
+  color: #fff;
+}
+.container{
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+nav .container{
+  margin-top: 100px;
+  
+}
+main .container{
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  margin-top: 150px;
+}
+
+main .container .content{
+  margin-left: 50px;
+}
+main .container .img img{
+  width: 2500px;
+}
+.container .icons {
+  display: flex;
+  margin-left: 85%;
+}
+.container .icons .icon:not(:last-child){
+  margin-right: 40px;
+}
+.container .icons .icon a i{
+  color: #fff;
+  padding: 20px;
+  border: 1px solid #fff;
+  text-align: center;
+  border-radius: 50%;
+  transition: all .4s ease;
+}
+
+.container .icons .icon a i:hover{
+  color: hsl(300, 69%, 60%);
+  border-color: hsl(300, 69%, 60%);
+}
+
+@media screen and (max-width: 1280px){
+  main .container{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .img img{
+    margin-top: -250px;
+    transform: scale(.5);
+    margin-bottom: -100px;
+  }
+  h1{
+    font-size: 40px;
+  }
+  p{
+    font-size: 20px;
+  }
+  main + .container{
+    margin-top: 60px;
+  }
+  .container .icons{
+    margin: 0 39%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .img{
+    margin-bottom: 100px;
+    margin-top: 50px;
+  }
+  .img img{
+    /* margin-top: -200px; */
+    transform: scale(.8);
+  }
+  main + .container{
+    margin-top: 100px;
+  }
+  .container .icons{
+    margin: 0 25%;
+  }
+  .container .icons .icon{
+    transform: scale(.85);
+  }
+}
+
